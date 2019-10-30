@@ -1,0 +1,22 @@
+{
+  "name": "comp426webapp",
+  "version": "1.0.0",
+  "description": "This application will deliver delicious recipes to hungry college students based solely on the ingredients in their pantry.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/burnsdy/COMP426WebApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/burnsdy/COMP426WebApp/issues"
+  },
+  "homepage": "https://github.com/burnsdy/COMP426WebApp#readme",
+  "dependencies": {
+    "browser-sync": "^2.26.7"
+  }
+}
