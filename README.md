@@ -22,6 +22,8 @@ Select and utilize an appropriate food-related API.
 Develop the backend of the app for retrieving recipes from various websites based on selected ingredients alone.
 
 
+_Contributors_
+
 Pranav Kulkarni
 
 Dylan Burns
