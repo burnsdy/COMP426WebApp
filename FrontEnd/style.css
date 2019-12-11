@@ -1,15 +1,19 @@
+* {
+	font-family: 'Bungee', cursive;
+}
 html {
 	height: 100%;
 	width: 100%;
-	background-color: #ffffff; /*White*/
+	background-color:white; /*White*/
 }
 body {
 	/* background-color: #DCDCDC; */
-	background-color: whitesmoke; /*White Smoke*/
+	background-color: white; /*White Smoke*/
 	margin-left: auto;
 	margin-right: auto;
 	padding: 0;
-	font-family: "Source Sans Pro", sans-serif;
+	font-family: Times 'Times New Roman', Times, serif;
+	background-image: url("img/foodbackground.jpeg");
 }
 div.container-fluid {
 	padding:0px;
@@ -43,8 +47,8 @@ div.vh_100 {
 	width: 100%;
 	height: 60px;
 	font-family: 'Arial Black', sans-serif !important;	
-	background-color: cornflowerblue !important;
-	border-bottom: 10px solid royalblue;
+	background-color:	black!important;
+	border-bottom: 10px solid	black;
 	transition: 0.5s;
 }
 	#navbar a {
@@ -89,7 +93,7 @@ div.vh_100 {
 	text-align: center;
 	width: 50vw;
 	height: 80px;
-	border: 4px solid cornflowerblue;
+	border: 4px solid #B22222;
 	border-radius: 8px;
 	font-size: 18px;
 }
@@ -112,7 +116,7 @@ div.vh_100 {
   }
   
   input[type=submit] {
-	background-color: DodgerBlue;
+	background-color: #DC143C;
 	color: #fff;
 	cursor: pointer;
   }
@@ -147,3 +151,125 @@ div.vh_100 {
 	color: #ffffff; 
   }
   
+ .nav-item active {
+	background-color: white; 
+ }
+
+ #home_title{
+	 margin-top: -200px; 
+	 font-size: 100px;
+	 font-family: 'Fredoka One', cursive;
+	
+	text-align: center;
+
+
+	background:rgba(255, 255, 255, 0.705);
+	 color: black;
+	 
+ }
+
+ #search_title {
+	 font-size: 25.2px;
+	 font-family: 'Berkshire Swash', cursive;
+
+ }
+* {
+	font-family: 'Roboto Slab', serif;
+}
+
+#getstartedbutton {
+	background-color: black; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin-left: 41%;
+  border: solid white 1px;
+
+}
+#getstartedbutton:hover {
+	background: red;
+}
+#description {
+	text-align: center;
+	margin-top: 30px;
+	margin-right: 70px;
+	
+}
+#what {
+	background: black;
+	color: white;
+	padding: 10px;
+	margin-bottom: 100px;
+
+	
+}
+
+#loginbutton {
+	background-color: black; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin-left: 43%;
+  border: solid white 1px;
+
+}
+#loginbutton:hover {
+	background: red;
+}
+#description {
+	text-align: center;
+	margin-top: 50px;
+	
+}
+#login {
+	background: black;
+	color: white;
+	padding: 10px;
+	margin-bottom: 100px;
+	margin-right: 400px;
+	
+}
+
+#how {
+	background: white; 
+
+}
+/*
+#what {
+	
+	float: left;
+
+	background: yellow; 
+	margin: 10px;
+}
+
+#how {
+	width: 20%; 
+	float: left; 
+	 
+	background: gray; 
+	margin: 10px; 
+}
+/*
+
+  #what, #how {
+	 border: solid 2px;
+	 margin-right: 230px;
+	 margin-left: 230px;
+	 margin-top: 100px;
+	 background-color: 	#D8BFD8	;
+	 padding: 30px;
+	 margin-bottom: 50px;
+	display: table;
+	width: 100%;
+
+ }
+*/
