@@ -1,3 +1,5 @@
+/* Regular pages style sheet */ 
+
 * {
 	font-family: 'Bungee', cursive;
 }
@@ -14,10 +16,11 @@ body {
 	padding: 0;
 	font-family: Times 'Times New Roman', Times, serif;
 	background-image: url("img/foodbackground.jpeg");
+	
 }
 div.container-fluid {
 	padding:0px;
-	display: inline-block;
+	display: block;
 }
 div.row {
 	padding: 0;
@@ -242,37 +245,38 @@ div.vh_100 {
 	background: white; 
 
 }
-/*
-#what {
-	
-	float: left;
 
-	background: yellow; 
-	margin: 10px;
-}
-
-#how {
-	width: 20%; 
-	float: left; 
-	 
-	background: gray; 
-	margin: 10px; 
-}
-/*
-
-  #what, #how {
-	 border: solid 2px;
-	 margin-right: 230px;
-	 margin-left: 230px;
-	 margin-top: 100px;
-	 background-color: 	#D8BFD8	;
-	 padding: 30px;
-	 margin-bottom: 50px;
-	display: table;
-	width: 100%;
-
- }
-*/
 #button {
 	width: 200px;
 }
+
+
+
+
+
+/* Login Style Sheet */ 
+
+#login_title {
+	margin-top: 0px; 
+	margin-left: 100px;
+	font-size: 80px;
+	font-family: 'Fredoka One', cursive;
+	
+	margin-left: 100px;
+	background:rgba(255, 255, 255, 0.705);
+	color: black;
+}
+
+#loginform {
+	text-align: center;
+}
+
+#loginbox, .form  {
+	display: inline-block;
+	width: 50%;
+
+}
+ li {
+	 display: inline;
+	 float: left;
+ }

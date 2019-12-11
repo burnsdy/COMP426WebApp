@@ -41,9 +41,25 @@
 					<li class="nav-item">
 						<a class="nav-link" href="index.html">Search</a>
 					</li>
-					<li class="nav-item active">
-						<a class="nav-link" href="accounts.html">Account</a>
+					<li class="nav-item">
+						<a class="nav-link" href="Accounts/login.html">
+							<script>if (localStorage.getItem('jwt') != null) {
+								document.write(localStorage.getItem('name'));
+							} else {
+								document.write("Login")
+							}
+						</script>
+						</a>
 					</li>
+					<script>
+						if (localStorage.getItem('jwt') != null){
+							document.write(
+							`<li class="nav-item">
+								<a class="nav-link" href="Accounts/logout.html">Logout</a>
+							</li>`
+							);
+						}
+					</script>
 				</ul>
 			</div>
 		</nav>
@@ -60,7 +76,7 @@
 				</div>
                         <div class = "col-12" id= "what">
 							<br>
-								<a id = "getstartedbutton" href="index.html"> Get Started! </a>
+								<a id = "getstartedbutton" href="index.html"> Get Started </a>
                         <br> 
                         <p id = "description"> Start with ingredients that you have at home! </p>
                         <br> 
@@ -68,7 +84,7 @@
 					
 					<div class = "col-12" id= "login">
 							<br>
-								<a id = "loginbutton" href="accounts.html"> Login! </a>
+								<a id = "loginbutton" href="accounts.html"> Login </a>
                         <br> 
                         <p id = "description"> Create an account to save all of your recipes! </p>
                         <br> 
