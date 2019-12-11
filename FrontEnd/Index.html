@@ -3,7 +3,7 @@
 <head>
 	<title>Cooking with Class</title>
 	<link rel='icon' href="./img/site_favicon.png" type='image/x-icon'>
-	<meta name="description=" content="We deliver delicious recipes to hungry college students based solely on the ingredients in their pantry!">
+	<meta name="description=" content="We deliver delicious recipes to hungry college students!">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -49,20 +49,24 @@
 			</div>
 			<div class="row">
 				<div class="col-12 text_center">
-						<form autocomplete="off" action="/action_page.php">
+						<form autocomplete="off">
 							<div class="autocomplete" style="width:700px;">
-							  <input id="myInput" type="text" name="foodsList" placeholder="Search for ingredients to add them to your pantry">
+								<input id="recipeVal" type="text" placeholder="Enter an ingedient or search for a recipe!">
 							</div>
-							<input type="submit">
+							<input id="recipeSearch" type="submit">
 						</form>
 				</div>
 			</div>
+			<button id="createAccount">Create Account</button>
 		</div>
 	</div>
 
-	<script>
-	</script>
-	<script src="./autocomplete.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="node_modules/axios/dist/axios.min.js"></script>
+	<script type="module" src="requests.js"></script>
+	<script type="module" src="autocomplete.js"></script>
+	<script type="module" src="spoonacular.js"></script>
+	<script type="module" src="newrecipe.js"></script>
 </body>
 <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>

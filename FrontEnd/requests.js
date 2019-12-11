@@ -37,12 +37,4 @@ export async function createAccount(event) {
     alert(result.status);
 }
 
-// export const handleEvents = function() {
-//     $(document).on('click', '.createAccount', createAccount);
-//     alert("test3");
-// }
-
-$(function () {
-    handleEvents();
-});
-$(document).on('click', '.createAccount', createAccount);
+$(document).on('click', '#createAccount', createAccount);
