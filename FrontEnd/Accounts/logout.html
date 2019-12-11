@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Logout</title>
+        <link rel="stylesheet" type="text/css" href="./style.css">
+    </head>
+    <body>
+        <h1>Are you sure you want to log out?</h1>
+        <h2><a href="../Index.html">Home</a></h2>
+        <div className="box has-background-white content">
+                <h3 className="has-text-dark">Logout</h3>
+                <form onSubmit=>
+                  <button id="button" onclick="logout()" value="Submit">Confirm</button>
+                  <button id="button" onclick="backHome()">Lol nope</button>
+                  <!-- <input className="button is-primary" onclick="sendCreateInfo()"/> -->
+                </form>
+                <!-- <a href="./login.html">Click here to login</a> -->
+              </div>
+              <script src="./handleAccounts.js"></script>
+              <script src="../node_modules/axios/dist/axios.js"></script>
+    </body>
+</html>
