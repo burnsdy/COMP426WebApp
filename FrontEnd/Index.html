@@ -57,7 +57,12 @@
 						</form>
 				</div>
 			</div>
-			<button id="createAccount">Create Account</button>
+			<button id="createAccount" class="float-center">Create Account</button>
+			<script>
+				document.getElementById("createAccount").onclick = function() {
+					location.href = "Accounts/create.html";
+				};
+			</script>
 		</div>
 	</div>
 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create Account</title>
+        <link rel="stylesheet" type="text/css" href="./style.css">
+    </head>
+    <body>
+        <h1>Make an account</h1>
+        <div className="box has-background-white content">
+                <h3 className="has-text-dark">Create Account</h3>
+                <form onSubmit=>
+                  <div className="field">
+                    <input id="name" className="name" placeholder="Username" type="text" name="name"/>
+                  </div>
+                  <div className="field">
+                    <input id="pass" className="pass" placeholder="Password" type="password" name="pass"/>
+                  </div>
+                  <button id="button" onclick="sendCreateInfo()" value="Submit">Submit</button>
+                  <!-- <input className="button is-primary" onclick="sendCreateInfo()"/> -->
+                </form>
+                <a href="./login.html">Click here to login</a>
+              </div>
+              <script src="./handleAccounts.js"></script>
+              <script src="../node_modules/axios/dist/axios.js"></script>
+    </body>
+</html>
