@@ -87,8 +87,8 @@ a {
 	}
 	#navbar #navbar_logo {
 		padding: 5px;
-		margin-right: 25px;
-		margin-top: 10px;
+		/* margin-right: 25px; */
+		margin-top: 0px;
 		float: left;
 		overflow: hidden;
 		height: 40px;

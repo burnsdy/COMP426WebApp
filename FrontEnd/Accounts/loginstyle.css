@@ -85,6 +85,9 @@ div.vh_45 {
 div.vh_100 {
 	height: 100vh;
 }
+.small_space {
+	padding: 30px;
+}
 #navbar {
 	padding-top: 0px;
 	padding-bottom: 0px;
@@ -283,9 +286,8 @@ div.vh_100 {
 	border-radius: 5px;
 	width: 75%;
 	margin-left: 150px;
-	height: 50%;
 	padding: 10px;
-
+	border: 2px solid black;
 }
 
 
