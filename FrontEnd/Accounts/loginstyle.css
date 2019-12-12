@@ -178,6 +178,8 @@ div.vh_100 {
 		font-size: 15px;
 		font-weight: bold;
 		float: inherit;
+		line-height: 50px;
+		display: inline-block;
 	}
 	#navbar a:hover {
 		transition: 0.3s;
