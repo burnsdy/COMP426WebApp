@@ -26,29 +26,42 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                       <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                          <a class="nav-link" href="../Home.html">Home<span class="sr-only"></span></a>
+                          <a class="nav-link" href="home.html">Home<span class="sr-only"></span></a>
                         </li>
+<<<<<<< HEAD
                         <li class="nav-item">
                           <a class="nav-link" href="../Myrecipes.html">Recipes<span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item">
+=======
+                        <!-- <li class="nav-item">
+                          <a class="nav-link" href="recipes.html">Recipes<span class="sr-only"></span></a>
+                        </li> -->
+                        <!-- <li class="nav-item">
+>>>>>>> 6de69dc8bbfe6d1692595292cbe34ff7d3845949
                           <a class="nav-link" href="../Index.html">Search</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
+<<<<<<< HEAD
                           <a class="nav-link" href="../Login.html">
+=======
+>>>>>>> 6de69dc8bbfe6d1692595292cbe34ff7d3845949
                             <script>if (localStorage.getItem('jwt') != null) {
-                              document.write(localStorage.getItem('name'));
+                              document.write(`
+                                <a href="myrecipes.html">${localStorage.getItem('name')}</a>
+                              `);
                             } else {
-                              document.write("Login")
+                              document.write(`
+                                <a href="../Accounts/login.html">Login</a>
+                              `)
                             }
                           </script>
-                          </a>
                         </li>
                         <script>
                           if (localStorage.getItem('jwt') != null){
                             document.write(
                             `<li class="nav-item">
-                              <a class="nav-link" href="Accounts/logout.html">Logout</a>
+                              <a class="nav-link" href="../Accounts/logout.html">Logout</a>
                             </li>`
                             );
                           }
@@ -59,7 +72,7 @@
         <h1 id = "recipe_title">Popular Recipes</h1>
         <h2 id = "recipebox">We know you'll enjoy trying these out!</h2>
         <div id="recipes"></div>
-        <script src="backendStuff.js"></script>
+        <script src="../functionality/backendStuff.js"></script>
         <script>
             $(document).ready(function() {
                 loadPrivate();

@@ -51,50 +51,19 @@ async function addRecipeUser(id, name, ingredients, instructions){
                 }
             }
         });
-        document.write(`
-        <style>
-        .alert {
-          padding: 20px;
-          background-color: #00ff00;
-          color: white;
-        }
-        
-        .closebtn {
-          margin-left: 15px;
-          color: white;
-          font-weight: bold;
-          float: right;
-          font-size: 22px;
-          line-height: 20px;
-          cursor: pointer;
-          transition: 0.3s;
-        }
-        
-        .closebtn:hover {
-          color: black;
-        }
-        </style>
-        <div class="alert">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-        <strong>Congrats!</strong> You just made a new recipe! Click <a href="myrecipes.html">Here</a> to look at your recipes.
-        </div>
-        `);
+        alert("Congrats! You just made a new recipe! Click your account name to see your stored recipes!")
     } catch (error) {
         alert(error);
     }
 }
 
-function stringToHash(string) { 
-                  
+async function stringToHash(string) {        
     var hash = 0; 
-      
     if (string.length == 0) return hash; 
-      
-    for (i = 0; i < string.length; i++) { 
-        char = string.charCodeAt(i); 
+    for (let i = 0; i < string.length; i++) { 
+        let char = string.charCodeAt(i); 
         hash = ((hash << 5) - hash) + char; 
         hash = hash & hash; 
     } 
-      
     return hash; 
 } 

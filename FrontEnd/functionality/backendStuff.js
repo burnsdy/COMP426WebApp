@@ -12,6 +12,60 @@ async function getPrivate() {
     }
 }
 
+async function getUser() {
+    const tokenStr = localStorage.getItem('jwt');
+    let name = localStorage.getItem('name');
+    try{
+        const res = await axios({
+            method: "get",
+            url: "http://localhost:3000/user/recipes",
+            headers: {Authorization: `Bearer ${tokenStr}`},
+        });
+        return res;
+    } catch(error){
+        alert(error);
+    }
+}
+
+async function loadUser() {
+    let result = await getUser();
+    let objs = result.data.result;
+    let ids = Object.keys(objs);
+    let html = `<div id="recipes">`;
+    for(let i=0; i<ids.length; i++) {
+        let id = ids[i];
+        let name = objs[id].name;
+        let ingArray = objs[id].ingredients;
+        let ingredients = `<ul>`;
+        for(let k=0; k<ingArray.length; k++) {
+            ingredients = ingredients + `
+                <li>${ingArray[k]}</li>
+            `;
+        }
+        ingredients = ingredients + `</ul>`;
+        let instructions = objs[id].instructions;
+        let render = `
+            <div class="recipebox">
+                <div class="inner">
+                    <h2>${name}</h2>
+                    <hr>
+                    <p>${ingredients}</p>
+                    <p>${instructions}<p>
+                    <button id=${id} class="edit">Edit</button>
+                    <button id=${id} class="delete">Delete</button>
+                </div>
+            </div>
+        `;
+        html = html + render;
+        console.log(i);
+        if (i>4) {
+            break;
+        }
+    }
+    html = html + `</div>`;
+    $('#recipes').replaceWith(html);
+}
+
 async function loadPrivate() {
     let result = await getPrivate();
     let objs = result.data.result;
@@ -51,11 +105,9 @@ async function loadPrivate() {
 }
 
 async function renderPrivateUser() {
-
 }
 
 async function renderPrivateSpt() {
-
 }
 
 async function requestInfo(id) {
@@ -148,8 +200,19 @@ async function stringToHash(string) {
     } 
     return hash; 
 } 
-$(document).on('click', '.save', function() {
-    // var par = $(this).;
-    // console.log(par);
-})
+
+async function delRecipe() {
+    const recipeID = event.target.id;
+    let obj = await getRecipe(recipeID);
+}
+
+async function editRecipe() {
+    const recipeID = event.target.id;
+    let obj = await getRecipe(recipeID);
+}
+
 $(document).on('click', '.save', saveRecipe);
+
+$(document).on('click', '.delete', delRecipe);
+
+$(document).on('click', '.edit', editRecipe);
