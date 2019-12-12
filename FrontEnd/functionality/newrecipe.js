@@ -6,6 +6,10 @@ async function addRecipePrivate() {
     const id = stringToHash(name);
     // alert(name);
     const ingredients = document.getElementById("ingredients").value;
+    let ingredientsArr = ingredients.split(',');
+    for(let i=0; i<ingredientsArr.length; i++) {
+        ingredientsArr[i] = ingredientsArr[i].trim();
+    }
     // alert(ingredients);
     const instructions = document.getElementById("instructions").value;
     // alert(instructions);
@@ -18,10 +22,9 @@ async function addRecipePrivate() {
             "type": "merge",
             'data': {
                 'data': {
-                    // "hah": "hah"
-                        'name': name,
-                        'ingredients': ingredients,
-                        'instructions': instructions,
+                    'name': name,
+                    'ingredients': ingredientsArr,
+                    'instructions': instructions,
                 }
             }
         });
@@ -32,7 +35,6 @@ async function addRecipePrivate() {
 }
 
 async function addRecipeUser(id, name, ingredients, instructions){
-    event.preventDefault();
     const tokenStr = localStorage.getItem('jwt');
     try {
         const res = await axios({
