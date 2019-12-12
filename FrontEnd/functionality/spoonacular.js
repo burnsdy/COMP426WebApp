@@ -2,7 +2,7 @@ async function requestID(event) {
     event.preventDefault();
     const result = await axios({
         method: 'get',
-        url: 'https://api.spoonacular.com/recipes/search?apiKey=85bb97fb65ed4a869c3b1fcde9430a96&query=' + $("input[id=recipeVal]").val() + '&number=5&limitLicense=true&instructionsRequired=true',
+        url: 'https://api.spoonacular.com/recipes/search?apiKey=998f9ad16bfa41feb536a52054ae9101&query=' + $("input[id=recipeVal]").val() + '&number=5&limitLicense=true&instructionsRequired=true',
     });
     return result;
 }
@@ -26,7 +26,7 @@ async function getId(event) {
 async function requestInfo(id) {
     const result = await axios({
         method: 'get',
-        url: 'https://api.spoonacular.com/recipes/' + id + '/information/?apiKey=85bb97fb65ed4a869c3b1fcde9430a96'
+        url: 'https://api.spoonacular.com/recipes/' + id + '/information/?apiKey=998f9ad16bfa41feb536a52054ae9101'
     });
     return result;
 }
