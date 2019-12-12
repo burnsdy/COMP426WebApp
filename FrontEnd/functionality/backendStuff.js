@@ -63,31 +63,35 @@ async function saveRecipe(event) {
         // // alert(ingredients);
         // const instructions = document.getElementById("instructions").value;
         // // alert(instructions);
+        // const obj = event.target.value;
         const obj = event.target.value;
-        const name = obj.name;
-        const id = stringToHash(name);
-        const ingredients = obj.ingredients;
-        const instructions = obj.instructions
-        const tokenStr = localStorage.getItem('jwt');
-        try {
-            const res = await axios({
-                method: 'post',
-                url: "http://localhost:3000/private/recipes/" + id,
-                headers: {Authorization: `Bearer ${tokenStr}`},
-                "type": "merge",
-                'data': {
-                    'data': {
-                        // "hah": "hah"
-                            'name': name,
-                            'ingredients': ingredients,
-                            'instructions': instructions,
-                    }
-                }
-            });
-            saveRecipeUser(id, name, ingredients, instructions);
-        } catch (error) {
-            alert(error);
-        }
+        console.log($(".recipebox").value);
+        // console.log(obj.name);
+        // const name = obj.name;
+        // alert(name);
+        // const id = stringToHash(name);
+        // const ingredients = obj.ingredients;
+        // const instructions = obj.instructions
+        // const tokenStr = localStorage.getItem('jwt');
+        // try {
+        //     const res = await axios({
+        //         method: 'post',
+        //         url: "http://localhost:3000/private/recipes/" + id,
+        //         headers: {Authorization: `Bearer ${tokenStr}`},
+        //         "type": "merge",
+        //         'data': {
+        //             'data': {
+        //                 // "hah": "hah"
+        //                     'name': name,
+        //                     'ingredients': ingredients,
+        //                     'instructions': instructions,
+        //             }
+        //         }
+        //     });
+        //     saveRecipeUser(id, name, ingredients, instructions);
+        // } catch (error) {
+        //     alert(error);
+        // }
     }
     
 async function saveRecipeUser(id, name, ingredients, instructions){
@@ -127,5 +131,8 @@ function stringToHash(string) {
         
     return hash; 
 } 
-
+$(document).on('click', '.save', function() {
+    // var par = $(this).;
+    // console.log(par);
+})
 $(document).on('click', '.save', saveRecipe);
