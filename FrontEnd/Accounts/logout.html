@@ -8,25 +8,25 @@
     </head>
     <body>
         <nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <a class="navbar-brand" href="/">
+            <a class="navbar-brand" href="../views/home.html">
               <img id="navbar_logo" src="../img/navbar_logo.png">
-              <a class="nav-link" href="/">FoodFinderrz<span class="sr-only"></span></a>
+              <a class="nav-link" href="../views/home.html">FoodFinderrz</a>
             </a>
             <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button> -->
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse" id="navbarNav resetmargintop">
               <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
+                <li class="nav-item active floatright">
                   <a class="nav-link" href="../views/home.html">Home<span class="sr-only"></span></a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item floatright">
                   <a class="nav-link" href="../views/recipes.html">Recipes<span class="sr-only"></span></a>
                 </li>
                 <!-- <li class="nav-item">
                   <a class="nav-link" href="index.html">Search</a>
                 </li> -->
-                <li class="nav-item">
+                <li class="nav-item floatright">
                   <a class="nav-link" href="login.html">
                     <script>if (localStorage.getItem('jwt') != null) {
                       document.write(localStorage.getItem('name'));
@@ -39,7 +39,7 @@
                 <script>
                   if (localStorage.getItem('jwt') != null){
                     document.write(
-                    `<li class="nav-item">
+                    `<li class="nav-item floatright">
                       <a class="nav-link" href="logout.html">Logout</a>
                     </li>`
                     );

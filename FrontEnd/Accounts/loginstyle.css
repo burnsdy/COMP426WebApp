@@ -21,6 +21,10 @@ body {
 	margin-top: -24px;
 }
 
+#resetmargintop {
+	margin-top: -14px;
+}
+
 #loginbox {
 	border: 1px solid black;
 	margin-left: auto;
