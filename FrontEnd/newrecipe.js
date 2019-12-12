@@ -13,19 +13,19 @@ async function addRecipePrivate() {
         const res = await axios({
             method: 'post',
             url: "http://localhost:3000/private/recipes",
-            headers: {Authorization: `Bearer ${tokenStr}`},
-            data: {
-                data: {
-                    item: {
-                        id: id,
-                        name: name,
-                        ingredients: ingredients,
-                        instructions: instructions,
+            headers: {Authorization: `Bearer` + tokenStr},
+            "type": "merge",
+            'data': {
+                'data': {
+                    'recipe': {
+                        'id': id,
+                        'name': name,
+                        'ingredients': ingredients,
+                        'instructions': instructions,
                     }
                 }
-            },
-            type: "merge",
-        })
+            }
+        });
     } catch (error) {
         alert(error);
     }
