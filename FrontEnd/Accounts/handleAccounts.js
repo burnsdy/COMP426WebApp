@@ -79,7 +79,7 @@ function logout() {
     event.preventDefault();
     localStorage.removeItem('jwt');
     localStorage.removeItem('name');
-    window.location.replace('http://localhost:3001/');
+    window.location.replace('http://localhost:3001/home.html');
 }
 
 function backHome() {
