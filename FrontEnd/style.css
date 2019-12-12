@@ -262,6 +262,7 @@ a {
 	padding: 30px;
 }
 
+
 #loginbutton {
 	background-color: black; /* Green */
   border: none;
@@ -281,6 +282,7 @@ a {
 #description {
 	text-align: center;
 	margin-top: 50px;
+	margin-right: 75px;
 	
 }
 #login {

@@ -4,6 +4,7 @@ async function addRecipePrivate() {
     // alert(id);
     const name = document.getElementById("name").value;
     const id = stringToHash(name);
+    id = stripSlashes(id);
     // alert(name);
     const ingredients = document.getElementById("ingredients").value;
     let ingredientsArr = ingredients.split(',');
