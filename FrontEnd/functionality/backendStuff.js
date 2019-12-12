@@ -1,13 +1,12 @@
 async function getPublic() {
     const res = await axios({
         method: "get",
-        url: "http://localhost:3000/public/recipes",
-        headers: {Authorization: `Bearer ${tokenStr}`},
+        url: "http://localhost:3000/public/recipes"
     });
     return res;
 }
 
-async function loadUser() {
+async function loadPublic() {
     let result = await getPublic();
     let objs = result.data.result;
     let ids = Object.keys(objs);
@@ -22,6 +21,7 @@ async function loadUser() {
                 <li>${ingArray[k]}</li>
             `;
         }
+        let img = objs[id].image;
         ingredients = ingredients + `</ul>`;
         let instructions = objs[id].instructions;
         let render = `
@@ -29,10 +29,9 @@ async function loadUser() {
                 <div class="inner">
                     <h2>${name}</h2>
                     <hr>
+                    <img src=${img}>
                     <p>${ingredients}</p>
                     <p>${instructions}<p>
-                    <button id=${id} class="edit">Edit</button>
-                    <button id=${id} class="delete">Delete</button>
                 </div>
             </div>
         `;
@@ -150,12 +149,6 @@ async function loadPrivate() {
     }
     html = html + `</div>`;
     $('#recipes').replaceWith(html);
-}
-
-async function renderPrivateUser() {
-}
-
-async function renderPrivateSpt() {
 }
 
 async function requestInfo(id) {

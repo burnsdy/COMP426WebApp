@@ -25,7 +25,7 @@
     	<nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
 			<a class="navbar-brand" href="/">
 				<img id="navbar_logo" src="../img/navbar_logo.png">
-				<a class="nav-link" href="./home.html">FoodFinderrz</a>
+				<a id="bootstrap-override" class="nav-link" href="./home.html">FoodFinderrz</a>
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -67,7 +67,7 @@
 		</nav>
 		<div class="container-fluid nopadding body_block">
 			<div class="row">
-				<div class="col-12 vh_45">
+				<div class="col-12 h_400">
 				</div>
 			</div>
 			<div class="row">
@@ -94,6 +94,11 @@
                         <br> 
 					</div>
 					<div class="col-12 nopadding">
+						<div id="sample">
+							<div class="sample-inner">
+								<h2 id="sample-text">Here are some sample recipes for you to enjoy:</h2>
+							</div>
+						</div>
 						<div id="recipes"></div>
 					</div>
 					<script>
@@ -117,7 +122,7 @@
 	<script src="../functionality/backendStuff.js"></script>
 	<script>
 		$(document).ready(function() {
-			loadUser();
+			loadPublic();
 		});
 	</script>
 	<script src="../node_modules/axios/dist/axios.js"></script>
