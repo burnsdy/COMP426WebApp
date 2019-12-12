@@ -188,7 +188,7 @@ div.vh_100 {
 	}
 
 	#pass, #name {
-		width: 150px;
+		width: 75%;
 		padding: 2px;
 		margin: 5px;
 		border: solid black 1px;
