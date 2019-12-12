@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel='icon' href="./img/site_favicon.png" type='image/x-icon'>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-        <title>Popular Recipes Right Now!</title>
-        <link rel="stylesheet" type="text/css" href="../Accounts/loginstyle.css">
+        <title>
+            Make a Recipe
+        </title>
+        <link rel="stylesheet" type="text/css" href="Accounts/loginstyle.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
 
         <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
     </head>
     <body>
-            <div class="container-fluid vh_100">
-                    <nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-                    
+        <!-- div to store a recipe in --><div class="container-fluid vh_100">
+            <nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            
                     <a class="navbar-brand" href="/">
                       <img id="navbar_logo" src="../Img/navbar_logo.png">
                       <a id = "navtitle" class="nav-link" href="../Home.html">FoodFinderrz<span class="sr-only"></span></a>
@@ -56,15 +53,22 @@
                       </ul>
                     </div>
                   </nav>
-        <h1 id = "recipe_title">Popular Recipes</h1>
-        <h2 id = "recipebox">We know you'll enjoy trying these out!</h2>
-        <div id="recipes"></div>
-        <script src="backendStuff.js"></script>
-        <script>
-            $(document).ready(function() {
-                loadPrivate();
-            });
-        </script>
-        <script src="../node_modules/axios/dist/axios.js"></script>
+                  <h1 id = "account_title">Make a Recipe</h1>
+        <div id = "makerecipebox">
+            <form>
+                <!-- <input id="id" className="id" placeholder="Recipe ID" type="text" name="id"/> -->
+                <input id="name" className="name" placeholder="Recipe Name" type="text" name="name"/>
+               
+                
+                <input id="ingredients" className="ingredients" placeholder="Ingredients" type="text" name="ingredients"/>
+                <br>
+                <input id="instructions" className="instructions" placeholder="Instructions" type="text" name="instructions"/>
+                <br>
+                <button id="recipebutton" onclick="addRecipePrivate()">Make Recipe</button>
+                <h4 id="putacomma">Be sure to enter a comma-separated list of ingredients!</h4>
+            </form>
+        </div>
+        <script src="newrecipe.js"></script>
+        <script src="node_modules/axios/dist/axios.js"></script>
     </body>
 </html>

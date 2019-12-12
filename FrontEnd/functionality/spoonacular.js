@@ -76,9 +76,9 @@ async function buildHTML(array) {
                     <h2 id="name" value="${id}">${name}</h2>
                     <img src="${image}">
                     <hr>
-                    <p id="ingredients">${ingredients}</p>
-                    <p id="instructions">${instructions}<p>
-                    <button class="save" value="${obj}">Save to your Recipe Book</button>
+                    <p>${ingredients}</p>
+                    <p>${instructions}<p>
+                    <button class="save" id=${id}>Save to your Recipe Book</button>
                 </div>
             </div>
         `;
