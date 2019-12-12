@@ -12,17 +12,39 @@ async function addRecipePrivate() {
     try {
         const res = await axios({
             method: 'post',
-            url: "http://localhost:3000/private/recipes",
-            headers: {Authorization: `Bearer` + tokenStr},
+            url: "http://localhost:3000/private/recipes/" + id,
+            headers: {Authorization: `Bearer ${tokenStr}`},
             "type": "merge",
             'data': {
                 'data': {
-                    'recipe': {
-                        'id': id,
+                    // "hah": "hah"
                         'name': name,
                         'ingredients': ingredients,
                         'instructions': instructions,
-                    }
+                }
+            }
+        });
+        addRecipeUser(id, name, ingredients, instructions);
+    } catch (error) {
+        alert(error);
+    }
+}
+
+async function addRecipeUser(id, name, ingredients, instructions){
+    event.preventDefault();
+    const tokenStr = localStorage.getItem('jwt');
+    try {
+        const res = await axios({
+            method: 'post',
+            url: "http://localhost:3000/user/recipes/" + id,
+            headers: {Authorization: `Bearer ${tokenStr}`},
+            "type": "merge",
+            'data': {
+                'data': {
+                    // "hah": "hah"
+                        'name': name,
+                        'ingredients': ingredients,
+                        'instructions': instructions,
                 }
             }
         });
