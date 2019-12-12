@@ -3,6 +3,9 @@
     <head>
         <title>Create Account</title>
         <link rel="stylesheet" type="text/css" href="loginstyle.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="container-fluid vh_100">
@@ -10,7 +13,7 @@
             
             <a class="navbar-brand" href="/">
               <img id="navbar_logo" src="./img/navbar_logo.png">
-              <a class="nav-link" href="/">Cooking with Class<span class="sr-only"></span></a>
+              <a id = "navtitle" class="nav-link" href="/">FoodFinderrz<span class="sr-only"></span></a>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -27,7 +30,7 @@
                   <a class="nav-link" href="../Index.html">Search</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="Accounts/login.html">
+                  <a class="nav-link" href="login.html">
                     <script>if (localStorage.getItem('jwt') != null) {
                       document.write(localStorage.getItem('name'));
                     } else {
@@ -48,9 +51,9 @@
               </ul>
             </div>
           </nav>
-        <h1>Make an account</h1>
-        <div className="box has-background-white content">
-                <h3 className="has-text-dark">Create Account</h3>
+        <h1 id = "account_title">Create an Account</h1>
+        <div id = "create_account" className="box has-background-white content">
+                
                 <form onSubmit=>
                   <div className="field">
                     <input id="name" className="name" placeholder="Username" type="text" name="name"/>
@@ -58,11 +61,13 @@
                   <div className="field">
                     <input id="pass" className="pass" placeholder="Password" type="password" name="pass"/>
                   </div>
+                  <div id ="buttons">
                   <button id="button" onclick="sendCreateInfo()" value="Submit">Submit</button>
                   <!-- <input className="button is-primary" onclick="sendCreateInfo()"/> -->
                 </form>
-                <a href="./login.html">Click here to login</a>
+                <a id = "clickhere" href="./login.html">Login</a>
               </div>
+            </div>
               <script src="./handleAccounts.js"></script>
               <script src="../node_modules/axios/dist/axios.js"></script>
     </body>
