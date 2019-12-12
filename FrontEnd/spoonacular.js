@@ -98,12 +98,4 @@ async function recipeHandler(event) {
     let html = buildHTML(recipesjson);
 }
 
-async function saveRecipe(event) {
-    event.preventDefault();
-    
-
-
-}
-
 $(document).on('click', '#recipeSearch', recipeHandler);
-$(document).on('click', '.save', saveRecipe);

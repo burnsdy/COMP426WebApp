@@ -11,3 +11,12 @@ async function getData() {
         alert(error);
     }
 }
+
+async function saveRecipe(event) {
+    event.preventDefault();
+
+    
+
+}
+
+$(document).on('click', '.save', saveRecipe);
