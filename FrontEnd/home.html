@@ -36,7 +36,7 @@
 						<a class="nav-link" href="home.html">Home<span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="recipes.html">Recipes<span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="recipes.html">Popular<span class="sr-only">(current)</span></a>
 					</li>
 					<script>
 						if (localStorage.getItem('jwt') != null){
@@ -47,15 +47,18 @@
 							);
 						}
 					</script>
-					<li class="nav-item">
+					<!-- <li class="nav-item">
 						<a class="nav-link" href="index.html">Search</a>
-					</li>
+					</li> -->
 					<li class="nav-item">
-						<a class="nav-link" href="Accounts/login.html">
+						<!-- <a class="nav-link" href="Accounts/login.html"> -->
 							<script>if (localStorage.getItem('jwt') != null) {
-								document.write(localStorage.getItem('name'));
+								document.write(`<a href="myrecipes.html">${localStorage.getItem('name')}</a>`
+									);
 							} else {
-								document.write("Login")
+								document.write(`
+								<a class="nav-link" href="Accounts/login.html">Login</a>
+								`)
 							}
 						</script>
 						</a>
