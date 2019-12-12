@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Recipes</title>
+        <link rel='icon' href="./img/site_favicon.png" type='image/x-icon'>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <title>Popular Recipes Right Now!</title>
     </head>
     <body>
-        <h1>Here are the 5 most recent recipes:</h1>
-        <button onclick="getData()">Click me!</button>
+        <h1>Popular Recipes among FoodFinderzz Users</h1>
+        <h2>We know you'll enjoy trying these out!</h2>
         <script src="backendStuff.js"></script>
+        <script>
+            $(document).ready(function() {
+                loadPrivate();
+            });
+        </script>
         <script src="../node_modules/axios/dist/axios.js"></script>
     </body>
 </html>
