@@ -77,6 +77,7 @@ async function buildHTML(array) {
                     <hr>
                     <p>${ingredients}</p>
                     <p>${instructions}<p>
+                    <button class="save" value="obj">Save to your Recipe Book</button>
                 </div>
             </div>
         `;
@@ -97,4 +98,12 @@ async function recipeHandler(event) {
     let html = buildHTML(recipesjson);
 }
 
+async function saveRecipe(event) {
+    event.preventDefault();
+    
+
+
+}
+
 $(document).on('click', '#recipeSearch', recipeHandler);
+$(document).on('click', '.save', saveRecipe);
