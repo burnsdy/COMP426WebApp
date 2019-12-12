@@ -45,12 +45,12 @@ async function loadUser() {
         ingredients = ingredients + `</ul>`;
         let instructions = objs[id].instructions;
         let render = `
-            <div class="recipebox">
+            <div class="recipebox" id=${id}>
                 <div class="inner">
                     <h2>${name}</h2>
                     <hr>
                     <p>${ingredients}</p>
-                    <p>${instructions}<p>
+                    <h5>${instructions}</h5>
                     <button id=${id} class="edit">Edit</button>
                     <button id=${id} class="delete">Delete</button>
                 </div>
@@ -202,14 +202,109 @@ async function stringToHash(string) {
 } 
 
 async function delRecipe() {
+    event.preventDefault();
+    // const name = localStorage.getItem('name');
     const recipeID = event.target.id;
-    let obj = await getRecipe(recipeID);
+    // console.log(recipeID);
+    // const id = stringToHash(name);
+    const tokenStr = localStorage.getItem('jwt');
+    const url = "http://localhost:3000/user/recipes/" + recipeID;
+    try {
+        const res = await axios.delete(url, {headers: {Authorization: `Bearer ${tokenStr}`}});
+        location.reload();
+    } catch (error){
+        alert(error);
+    }
+}
+
+async function findID(id) {
+    let result = await getUser();
+    // console.log(result);
+    let objs = result.data.result;
+    // console.log(objs);
+    let ids = Object.keys(objs);
+    // console.log(ids);
+    // console.log(objs[1214828765]);
+    for(let i=0; i<ids.length; i++) {
+        if (id == ids[i]){
+            return objs[id];
+        }
+    }
+    return 0;
 }
 
 async function editRecipe() {
+    event.preventDefault();
     const recipeID = event.target.id;
-    let obj = await getRecipe(recipeID);
+    // console.log(recipeID);
+    let obj = await findID(recipeID);
+    // console.log(obj);
+    let name = obj.name;
+    // console.log(name);
+    // alert(name);
+    const ingredients = obj.ingredients;
+    // console.log(ingredients);
+    const instructions = obj.instructions;
+    // console.log(instructions);
+    const tokenStr = localStorage.getItem('jwt');
+
+    $('div[id=' + recipeID + ']').html(`
+        <form id=${recipeID}>
+            <input placeholder="${name}" id="name"></input>
+            <input placeholder="${ingredients}" id="ingredients"></input>
+            <input placeholder="${instructions}" id="instructions"></input>
+            <button id="${recipeID}" class="edit" onclick="handleEdit();">Submit Changes</button>
+        </form>
+    `);
+
+
+    // try {
+    //     const res = await axios({
+    //         method: "post",
+    //         url: "http://localhost:3000/user/recipe" + id,
+    //         'data': {
+    //             'data': {
+    //                 'name': name,
+    //                 'ingredients': ingredients,
+    //                 'instructions': instructions,
+    //             }
+    //         }
+    //     });
+    // } catch (error) {
+    //     alert(error);
+    // }
 }
+
+async function handleEdit(){
+    const name = document.getElementById("name").value;
+    // console.log(name);
+    const ingredients = document.getElementById("ingredients").value;
+    // console.log(ingredients);
+    const instructions = document.getElementById("instructions").value;
+    // console.log(instructions);
+    const id = await stringToHash(name);
+    const tokenStr = localStorage.getItem('jwt');
+    // console.log(id);
+    try{
+        const res = await axios({
+            method: 'post',
+            url: "http://localhost:3000/user/recipes/" + id,
+            headers: {Authorization: `Bearer ${tokenStr}`},
+            "type": "merge",
+            'data': {
+                'data': {
+                    'name': name,
+                    'ingredients': ingredients,
+                    'instructions': instructions,
+                }
+            }
+        });
+        location.reload();
+    } catch (error){
+        console.log(error);
+    }
+}
+
 
 $(document).on('click', '.save', saveRecipe);
 
