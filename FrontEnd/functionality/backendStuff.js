@@ -1,3 +1,51 @@
+async function getPublic() {
+    const res = await axios({
+        method: "get",
+        url: "http://localhost:3000/public/recipes",
+        headers: {Authorization: `Bearer ${tokenStr}`},
+    });
+    return res;
+}
+
+async function loadUser() {
+    let result = await getPublic();
+    let objs = result.data.result;
+    let ids = Object.keys(objs);
+    let html = `<div id="recipes">`;
+    for(let i=0; i<ids.length; i++) {
+        let id = ids[i];
+        let name = objs[id].name;
+        let ingArray = objs[id].ingredients;
+        let ingredients = `<ul>`;
+        for(let k=0; k<ingArray.length; k++) {
+            ingredients = ingredients + `
+                <li>${ingArray[k]}</li>
+            `;
+        }
+        ingredients = ingredients + `</ul>`;
+        let instructions = objs[id].instructions;
+        let render = `
+            <div class="recipebox">
+                <div class="inner">
+                    <h2>${name}</h2>
+                    <hr>
+                    <p>${ingredients}</p>
+                    <p>${instructions}<p>
+                    <button id=${id} class="edit">Edit</button>
+                    <button id=${id} class="delete">Delete</button>
+                </div>
+            </div>
+        `;
+        html = html + render;
+        console.log(i);
+        if (i>4) {
+            break;
+        }
+    }
+    html = html + `</div>`;
+    $('#recipes').replaceWith(html);
+}
+
 async function getPrivate() {
     const tokenStr = localStorage.getItem('jwt');
     try{

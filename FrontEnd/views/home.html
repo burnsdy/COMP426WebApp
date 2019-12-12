@@ -25,7 +25,7 @@
     	<nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
 			<a class="navbar-brand" href="/">
 				<img id="navbar_logo" src="../img/navbar_logo.png">
-				<a class="nav-link" href="/">FoodFinderrz</a>
+				<a class="nav-link" href="./home.html">FoodFinderrz</a>
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -48,7 +48,7 @@
 						<!-- <a class="nav-link" href="Accounts/login.html"> -->
 							<script>
 							if (localStorage.getItem('jwt') != null) {
-								document.write(`<a href="recipes.html">${localStorage.getItem('name')}</a>`
+								document.write(`<a class="nav-link" href="recipes.html">${localStorage.getItem('name')}</a>`
 							);
 							}
 							</script>
@@ -65,7 +65,6 @@
 				</ul>
 			</div>
 		</nav>
-		<!-- Could add an image background with high transparency to make the background look less bland -->
 		<div class="container-fluid nopadding body_block">
 			<div class="row">
 				<div class="col-12 vh_45">
@@ -94,6 +93,9 @@
                         <p id = "description"> Start with ingredients that you have at home! </p>
                         <br> 
 					</div>
+					<div class="col-12 nopadding">
+						<div id="recipes"></div>
+					</div>
 					<script>
 						if(localStorage.getItem('jwt') == null){
 							document.write(`
@@ -112,7 +114,13 @@
 			</div>
 		</div>
 	</div>
-	
+	<script src="../functionality/backendStuff.js"></script>
+	<script>
+		$(document).ready(function() {
+			loadUser();
+		});
+	</script>
+	<script src="../node_modules/axios/dist/axios.js"></script>
 </body>
 <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
