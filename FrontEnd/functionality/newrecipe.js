@@ -51,6 +51,34 @@ async function addRecipeUser(id, name, ingredients, instructions){
                 }
             }
         });
+        document.write(`
+        <style>
+        .alert {
+          padding: 20px;
+          background-color: #00ff00;
+          color: white;
+        }
+        
+        .closebtn {
+          margin-left: 15px;
+          color: white;
+          font-weight: bold;
+          float: right;
+          font-size: 22px;
+          line-height: 20px;
+          cursor: pointer;
+          transition: 0.3s;
+        }
+        
+        .closebtn:hover {
+          color: black;
+        }
+        </style>
+        <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <strong>Congrats!</strong> You just made a new recipe! Click <a href="myrecipes.html">Here</a> to look at your recipes.
+        </div>
+        `);
     } catch (error) {
         alert(error);
     }
