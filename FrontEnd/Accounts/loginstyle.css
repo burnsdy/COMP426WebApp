@@ -9,6 +9,18 @@ body {
 	padding: 0;
 }
 
+.floatright {
+	float: right;
+}
+
+#fixmarginleft {
+	margin-left: 20px;
+}
+
+#setmargintop {
+	margin-top: -24px;
+}
+
 #loginbox {
 	border: 1px solid black;
 	margin-left: auto;
