@@ -2,12 +2,13 @@ async function requestID(event) {
     event.preventDefault();
     const result = await axios({
         method: 'get',
-        url: 'https://api.spoonacular.com/recipes/search?apiKey=196f5984b339460580d5dfca1b04e7be&query=' + $("input[id=recipeVal]").val() + '&number=5&limitLicense=true&instructionsRequired=true',
+        url: 'https://api.spoonacular.com/recipes/search?apiKey=eaa1289d27b5499ba6e34e7b69f5e0df&query=' + $("input[id=recipeVal]").val() + '&number=5&limitLicense=true&instructionsRequired=true',
     });
     return result;
 }
 
 async function getId(event) {
+    event.preventDefault();
     let result = await requestID(event);
     let response = [];
     response.push(result.data);
@@ -25,7 +26,7 @@ async function getId(event) {
 async function requestInfo(id) {
     const result = await axios({
         method: 'get',
-        url: 'https://api.spoonacular.com/recipes/' + id + '/information/?apiKey=196f5984b339460580d5dfca1b04e7be'
+        url: 'https://api.spoonacular.com/recipes/' + id + '/information/?apiKey=eaa1289d27b5499ba6e34e7b69f5e0df'
     });
     return result;
 }
@@ -77,7 +78,7 @@ async function buildHTML(array) {
                     <hr>
                     <p>${ingredients}</p>
                     <p>${instructions}<p>
-                    <button class="save" value="obj">Save to your Recipe Book</button>
+                    <button class="save" value="${obj}">Save to your Recipe Book</button>
                 </div>
             </div>
         `;
@@ -89,6 +90,7 @@ async function buildHTML(array) {
 }
 
 async function recipeHandler(event) {
+    event.preventDefault();
     let recipesjson = [];
     let ids = await getId(event);
     for(let i=0; i<ids.length; i++) {
@@ -98,4 +100,4 @@ async function recipeHandler(event) {
     let html = buildHTML(recipesjson);
 }
 
-$(document).on('click', '#recipeSearch', recipeHandler);
+$(document).on('click', '#searchbutton', recipeHandler);

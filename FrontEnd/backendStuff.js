@@ -15,16 +15,40 @@ async function getPrivate() {
 async function loadPrivate() {
     let result = await getPrivate();
     let objs = result.data.result;
-    console.log(objs);
-    for (recipe in objs) {
-        let i=0;
-        console.log(recipe);
-        
-
-        if (i>9) {
+    let ids = Object.keys(objs);
+    let html = `<div id="recipes">`;
+    for(let i=0; i<ids.length; i++) {
+        let id = ids[i];
+        console.log(objs[id].name);
+        let name = objs[id].name;
+        let ingArray = objs[id].ingredients;
+        let ingredients = `<ul>`;
+        for(let k=0; k<ingArray.length; k++) {
+            ingredients = ingredients + `
+                <li>${ingArray[k]}</li>
+            `;
+        }
+        ingredients = ingredients + `</ul>`;
+        let instructions = objs[id].instructions;
+        let render = `
+            <div class="recipebox">
+                <div class="inner">
+                    <h2>${name}</h2>
+                    <hr>
+                    <p>${ingredients}</p>
+                    <p>${instructions}<p>
+                    <button class="save">Save to your Recipe Book</button>
+                </div>
+            </div>
+        `;
+        html = html + render;
+        console.log(i);
+        if (i>4) {
             break;
         }
     }
+    html = html + `</div>`;
+    $('#recipes').replaceWith(html);
     
 }
 
