@@ -1,2 +1,55 @@
 {
-}
+    "recipes": {
+        "978422312": {
+        "name": "Tarragon Chicken With Peas",
+        "ingredients": [
+            "1 cup thawed baby peas",
+            "4 boneless chicken breasts",
+            "1 cup chicken stock",
+            "3 tablespoons extra virgin olive oil",
+            "2 tablespoons minced fresh tarragon",
+            "1 cup heavy cream",
+            "salt and pepper"
+        ],
+        "image": "https://spoonacular.com/recipeImages/662880-556x370.jpg",
+        "instructions": "<ol><li>Heat a large skillet over medium high heat and add olive oil.</li><li>Season the chicken liberally with salt and pepper, then sear until golden brown, about 5 minutes per side.</li><li>Combine chicken stock and cream and add to chicken, scraping up any browned bits from the bottom of the pan.</li><li>Bring to a boil, and then reduce to simmer and cook until chicken is cooked through and sauce is thickened, about 5-10 minutes.</li><li>Gently stir in tarragon and peas, cover, and cook for 1 minute to heat up peas.</li><li>Season with salt and pepper and serve sliced chicken over rice for an easy and elegant entre.</li></ol>"
+        },
+        "1273456958": {
+            "name": "Broccoli and Chickpea Rice Salad",
+            "ingredients": [
+                "1/4 cup sliced almonds (lightly toasted if desired)",
+                "4 cups broccoli florets",
+                "2 cups cooked brown rice (2/3 cup dried rice)",
+                "2 tablespoons Dijon mustard",
+                "1 1/2 cup cooked chickpeas (1/2 dried chickpeas)",
+                "1/4 cup fresh cilantro or parsley, trimmed and chopped",
+                "1 clove garlic, minced",
+                "2 to 3 green onions, trimmed and chopped, or 2 shallots finely chopped",
+                "fresh ground black pepper",
+                "juice from 1/2 lemon (1 1/2 tablespoons)",
+                "1 tablespoon olive oil",
+                "2 teaspoons olive oil",
+                "2 tablespoons pineapple juice (juice from canned pineapple)",
+                "1/2 teaspoon red pepper flakes",
+                "1 1/2 teaspoons sea salt, or to taste",
+                "1/3 cup sun-dried tomatoes, soaked in hot water for 40 minutes, drained and chopped (optional)",
+                "2 teaspoons tamari (soy) sauce"
+            ],
+            "image": "https://spoonacular.com/recipeImages/794349-556x370.jpg",
+            "instructions": "In a large skillet, heat the oil over medium heat. Add the broccoli, stir well, and cover. Cook, stirring often, until the broccoli is tender. Add the broccoli to a large bowl, along with the remaining salad ingredients.To make the dressing, whisk together all of the dressing ingredients in a small bowl. Pour the dressing over the salad and toss well to coat evenly. Taste for seasoning and serve."
+            },
+        "980511066": {
+        "name": "Perfect Peas",
+        "ingredients": [
+            "2 sticks of butter",
+            "1 tablespoon lemon juice",
+            "1/8 cup chopped mint",
+            "1 cup finely shredded parmesan cheese",
+            "1/8 cup chopped parsley",
+            "1 pound bag of frozen peas, steamed"
+        ],
+        "image": "https://spoonacular.com/recipeImages/655737-556x370.jpg",
+        "instructions": "<ol><li>In a small bowl, mix butter, herbs, lemon juice, and parmesan cheese.</li><li>Melt mixture over cooked peas and serve.</li></ol>"
+        }
+      }
+    }
