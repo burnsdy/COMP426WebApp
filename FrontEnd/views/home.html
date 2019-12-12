@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<title>FoodFinderrz</title>
-	<link rel='icon' href="./img/site_favicon.png" type='image/x-icon'>
+	<link rel='icon' href="../img/site_favicon.png" type='image/x-icon'>
 	<meta name="description=" content="We deliver delicious recipes to hungry college students!">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,7 +11,7 @@
 	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
-    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
     <link href="https://fonts.googleapis.com/css?family=Knewave&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
@@ -24,7 +24,7 @@
 	<div class="container-fluid vh_100">
     	<nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
 			<a class="navbar-brand" href="/">
-				<img id="navbar_logo" src="./img/navbar_logo.png">
+				<img id="navbar_logo" src="../img/navbar_logo.png">
 				<a class="nav-link" href="/">FoodFinderrz</a>
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,7 +57,7 @@
 						if (localStorage.getItem('jwt') != null){
 							document.write(
 							`<li class="nav-item">
-								<a class="nav-link" href="Accounts/logout.html">Logout</a>
+								<a class="nav-link" href="../Accounts/logout.html">Logout</a>
 							</li>`
 							);
 						}
@@ -81,11 +81,11 @@
 							<script>
 									if (localStorage.getItem('jwt') == null){
 										document.write(
-										`<a id = "getstartedbutton" href="Accounts/login.html"> Get Started </a>`
+										`<a id = "getstartedbutton" href="../Accounts/login.html"> Get Started </a>`
 										);
 									} else {
 										document.write(
-											`<a id = "getstartedbutton" href="index.html"> Get Started </a>`
+											`<a id = "getstartedbutton" href="../index.html"> Get Started </a>`
 										);
 									}
 								</script>
@@ -99,7 +99,7 @@
 							document.write(`
 							<div class = "col-12" id= "login">
 								<br>
-								<a id = "loginbutton" href="Accounts/login.html"> Login! </a>
+								<a id = "loginbutton" href="../Accounts/login.html"> Login! </a>
 								<br> 
 								<p id = "description"> Create an account to save all of your recipes! </p>
 								<br> 
