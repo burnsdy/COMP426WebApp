@@ -20,7 +20,7 @@
 			
 			<a class="navbar-brand" href="/">
 				<img id="navbar_logo" src="./img/navbar_logo.png">
-				<a class="nav-link" href="/">Cooking with Class</a>
+				<p class="nav-link">Cooking with Class</p>
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -28,13 +28,13 @@
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active">
-						<a class="nav-link" href="home.html">Home</a>
+						<a class="nav-link" href="views/home.html">Home</a>
 					</li>
 					<script>
 							if (localStorage.getItem('jwt') != null){
 								document.write(
 								`<li class="nav-item">
-									<a class="nav-link" href="recipes.html">Popular</a>
+									<a class="nav-link" href="views/recipes.html">Popular</a>
 								</li>`
 								);
 							}
@@ -43,7 +43,7 @@
 						if (localStorage.getItem('jwt') != null){
 							document.write(
 							`<li class="nav-item">
-								<a class="nav-link" href="makeRecipe.html">Create A Recipe</a>
+								<a class="nav-link" href="views/makeRecipe.html">Create A Recipe</a>
 							</li>`
 							);
 						}
@@ -53,11 +53,11 @@
 							<script>
 							if (localStorage.getItem('jwt') != null) {
 								document.write(`
-								<a href="myrecipes.html">${localStorage.getItem('name')}</a>
+								<a href="views/myrecipes.html">${localStorage.getItem('name')}</a>
 								`);
 							} else {
 								document.write(`
-								<a href="Accounts/login.html">Login</a>
+								<a href="../Accounts/login.html">Login</a>
 								`);
 							}
 						</script>
@@ -67,7 +67,7 @@
 						if (localStorage.getItem('jwt') != null){
 							document.write(
 							`<li class="nav-item">
-								<a class="nav-link" href="Accounts/logout.html">Logout</a>
+								<a class="nav-link" href="../Accounts/logout.html">Logout</a>
 							</li>`
 							);
 						}
@@ -121,10 +121,9 @@
 
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="node_modules/axios/dist/axios.min.js"></script>
-	<script type="module" src="requests.js"></script>
-	<script type="module" src="autocomplete.js"></script>
-	<script type="module" src="spoonacular.js"></script>
-	<script type="module" src="newrecipe.js"></script>
+	<script type="module" src="functionality/autocomplete.js"></script>
+	<script type="module" src="functionality/spoonacular.js"></script>
+	<script type="module" src="functionality/newrecipe.js"></script>
 	<script src="./Accounts/handleAccounts.js"></script>
 </body>
 <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>

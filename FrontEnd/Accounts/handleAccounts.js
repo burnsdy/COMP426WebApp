@@ -79,10 +79,10 @@ function logout() {
     event.preventDefault();
     localStorage.removeItem('jwt');
     localStorage.removeItem('name');
-    window.location.replace('http://localhost:3001/home.html');
+    window.location.replace('http://localhost:3001/views/home.html');
 }
 
 function backHome() {
     event.preventDefault();
-    window.location.replace('http://localhost:3001/home.html');
+    window.location.replace('http://localhost:3001/views/home.html');
 }
