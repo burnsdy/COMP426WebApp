@@ -89,16 +89,6 @@ async function getRecipe(id) {
 
 async function saveRecipe(event) {
     event.preventDefault();
-    // const id = document.getElementById("id").value;
-    // alert(id);
-    // const name = document.getElementById("name").value;
-    // const id = stringToHash(name);
-    // // alert(name);
-    // const ingredients = document.getElementById("ingredients").value;
-    // // alert(ingredients);
-    // const instructions = document.getElementById("instructions").value;
-    // // alert(instructions);
-    // const obj = event.target.value;
     const recipeID = event.target.id;
     let obj = await getRecipe(recipeID);
     let name = obj.name;
