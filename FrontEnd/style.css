@@ -15,7 +15,9 @@ body {
 	margin-right: auto;
 	padding: 0;
 	font-family: Times 'Times New Roman', Times, serif;
-	background-image: url("img/foodbackground.jpeg");
+	background-image: url("img/kitchenbg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 	
 }
 div.container-fluid {
@@ -159,14 +161,14 @@ div.vh_100 {
  }
 
  #home_title{
-	 margin-top: -200px; 
+	 margin-top: -250px;
 	 font-size: 100px;
 	 font-family: 'Fredoka One', cursive;
 	
 	text-align: center;
 
 
-	background:rgba(255, 255, 255, 0.705);
+	background:rgba(240, 228, 189, 0.705);
 	 color: black;
 	 
  }
@@ -203,10 +205,12 @@ div.vh_100 {
 	
 }
 #what {
-	background: black;
+	background: rgba(0, 0, 0, 0.705);
 	color: white;
 	padding: 10px;
-	margin-bottom: 100px;
+	margin-bottom: 50px;
+	height: 200px;
+	margin-top: -100px;
 
 	
 }
@@ -233,11 +237,12 @@ div.vh_100 {
 	
 }
 #login {
-	background: black;
+	background:rgba(0, 0, 0, 0.705);
 	color: white;
 	padding: 10px;
-	margin-bottom: 100px;
+	margin-bottom: 0px;
 	margin-right: 400px;
+	height: 200px;
 	
 }
 
@@ -277,6 +282,14 @@ div.vh_100 {
 
 }
  li {
+
 	 display: inline;
-	 float: left;
+	 
+ }
+
+
+ #recipeval {
+	 border: solid black 1px;
+	 padding: 10px;
+
  }
