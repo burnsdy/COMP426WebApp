@@ -168,4 +168,12 @@ async function stringToHash(string) {
     return hash; 
 } 
 
+async function delRecipe() {
+    
+}
+
 $(document).on('click', '.save', saveRecipe);
+
+$(document).on('click', '.delete', delRecipe);
+
+$(document).on('click', '.edit', editRecipe);

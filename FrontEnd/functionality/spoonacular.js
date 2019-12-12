@@ -73,7 +73,7 @@ async function buildHTML(array) {
         let render = `
             <div class="recipebox">
                 <div class="inner">
-                    <h2 value="${id}">${name}</h2>
+                    <h2 id="name" value="${id}">${name}</h2>
                     <img src="${image}">
                     <hr>
                     <p>${ingredients}</p>
