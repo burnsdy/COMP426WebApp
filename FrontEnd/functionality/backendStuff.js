@@ -111,7 +111,7 @@ async function loadUser() {
                     <h2>${name}</h2>
                     <hr>
                     <p>${ingredients}</p>
-                    <h5>${instructions}</h5>
+                    <p>${instructions}</p>
                     <button id=${id} class="edit">Edit</button>
                     <button id=${id} class="delete">Delete</button>
                 </div>
