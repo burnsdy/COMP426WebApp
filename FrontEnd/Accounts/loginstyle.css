@@ -20,6 +20,27 @@ body {
 	margin-top: -5px;
 	border-radius: 10px;
 	background-color: rgba(0, 0, 0, 0.705);
+	color: white;
+	
+	
+	
+}
+#recipebox {
+	border: 1px solid black;
+	margin-left: auto;
+	margin-right: auto;
+    /* margin-right: 500px;
+	margin-left: 500px; */
+	width:30%;
+    padding: 30px;
+	margin-top: -5px;
+	border-radius: 10px;
+	background-color: rgba(0, 0, 0, 0.705);
+	color: white;
+	margin-top: 20px;
+	font-size: 20px;
+	width: 75%;
+	
 	
 }
 
@@ -202,8 +223,8 @@ div.vh_100 {
   
 	}
 #recipe_title {
-	margin-top: 20px;
-	font-size: 70px;
+	margin-top: 100px;
+	font-size: 100px;
 	font-family: 'Fredoka One', cursive;
    text-align: center;
    background:rgba(240, 228, 189, 0.705);
@@ -255,6 +276,30 @@ div.vh_100 {
 	#clickhere:hover {
 		background: red;
 	}
-#buttons {
-	
+
+
+
+	#name, #ingredients, #instructions {
+		width: 75%;
+		padding: 5px;
+		margin: 15px;
+		font-size: 15px;
+	}
+
+	#ingredients, #instructions {
+		
+		height: 100px;
+	}
+#putacomma {
+	color: white;
 }
+
+	#makerecipebox {
+		background: rgba(0, 0, 0, 0.705);
+		border-radius: 5px;
+		width: 75%;
+		margin-left: 10%;
+		height: 68%;
+		padding: 1%;
+		margin-top: -50px;
+	}

@@ -5,6 +5,9 @@
             Make a Recipe
         </title>
         <link rel="stylesheet" type="text/css" href="Accounts/loginstyle.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
     </head>
     <body>
         <!-- div to store a recipe in --><div class="container-fluid vh_100">
@@ -50,21 +53,19 @@
                       </ul>
                     </div>
                   </nav>
-        <div id = "login">
+                  <h1 id = "account_title">Make a Recipe</h1>
+        <div id = "makerecipebox">
             <form>
                 <!-- <input id="id" className="id" placeholder="Recipe ID" type="text" name="id"/> -->
-                <input id="name" className="name" placeholder="Name" type="text" name="name"/>
-                <hr>
-                <h3>Be sure to enter a comma-separated list of ingredients!</h3>
-                <input id="ingredients" className="ingredients" placeholder="ingredients" type="text" name="ingredients"/>
+                <input id="name" className="name" placeholder="Recipe Name" type="text" name="name"/>
+               
+                
+                <input id="ingredients" className="ingredients" placeholder="Ingredients" type="text" name="ingredients"/>
                 <br>
                 <input id="instructions" className="instructions" placeholder="Instructions" type="text" name="instructions"/>
-<<<<<<< HEAD
-                <button id="recipebutton" onclick="addRecipePrivate()">Make Recipe</button>
-=======
                 <br>
-                <button id="button" onclick="addRecipePrivate()">Make Recipe</button>
->>>>>>> 4c7829b128acc0057f3464f0c46f06f3a6f3adb3
+                <button id="recipebutton" onclick="addRecipePrivate()">Make Recipe</button>
+                <h4 id="putacomma">Be sure to enter a comma-separated list of ingredients!</h4>
             </form>
         </div>
         <script src="newrecipe.js"></script>
