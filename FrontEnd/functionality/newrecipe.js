@@ -4,7 +4,7 @@ async function addRecipePrivate() {
     // alert(id);
     const name = document.getElementById("name").value;
     const id = stringToHash(name);
-    id = stripSlashes(id);
+    // id = stripSlashes(id);
     // alert(name);
     const ingredients = document.getElementById("ingredients").value;
     let ingredientsArr = ingredients.split(',');
@@ -34,7 +34,21 @@ async function addRecipePrivate() {
         alert(error);
     }
 }
-
+function stripSlashes(str){
+    return (str + '')
+    .replace(/\\(.?)/g, function (s, n1) {
+      switch (n1) {
+        case '\\':
+          return '\\'
+        case '0':
+          return '\u0000'
+        case '':
+          return ''
+        default:
+          return n1
+      }
+    })
+}
 async function addRecipeUser(id, name, ingredients, instructions){
     const tokenStr = localStorage.getItem('jwt');
     try {
