@@ -201,9 +201,39 @@ div.vh_100 {
   width: 100px;
   
 	}
-
+#recipe_title {
+	margin-top: 20px;
+	font-size: 70px;
+	font-family: 'Fredoka One', cursive;
+   text-align: center;
+   background:rgba(240, 228, 189, 0.705);
+	color: black;
 	
-	#button:hover {
+}
+
+#recipebackground {
+	background: rgba(0, 0, 0, 0.705);
+	border-radius: 5px;
+	height: 100px;
+}
+	#recipebutton {
+		background-color: black; /* Green */
+  border: none;
+  color: white;
+  padding: 1px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+ height: 35px;
+  border: solid white 1px;
+  margin-top: 30px;
+  width: 200px;
+  
+	} 
+
+
+	#button:hover, #recipebutton:hover {
 		background: red; 
 	}
 
