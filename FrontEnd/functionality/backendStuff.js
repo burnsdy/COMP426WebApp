@@ -148,8 +148,13 @@ async function stringToHash(string) {
     } 
     return hash; 
 } 
-$(document).on('click', '.save', function() {
-    // var par = $(this).;
-    // console.log(par);
-})
+
+async function delRecipe() {
+    
+}
+
 $(document).on('click', '.save', saveRecipe);
+
+$(document).on('click', '.delete', delRecipe);
+
+$(document).on('click', '.edit', editRecipe);
