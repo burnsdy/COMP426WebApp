@@ -12,6 +12,27 @@ async function getPrivate() {
     }
 }
 
+async function getUser() {
+    const tokenStr = localStorage.getItem('jwt');
+    let name = localStorage.getItem('name');
+    try{
+        const res = await axios({
+            method: "get",
+            url: "http://localhost:3000/user/recipes",
+            headers: {Authorization: `Bearer ${tokenStr}`},
+        });
+        return res;
+    } catch(error){
+        alert(error);
+    }
+}
+
+async function loadUser() {
+    let result = await getUser();
+    console.log("test");
+    console.log(result);
+}
+
 async function loadPrivate() {
     let result = await getPrivate();
     let objs = result.data.result;
@@ -51,11 +72,9 @@ async function loadPrivate() {
 }
 
 async function renderPrivateUser() {
-
 }
 
 async function renderPrivateSpt() {
-
 }
 
 async function requestInfo(id) {
