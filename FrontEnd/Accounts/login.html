@@ -14,7 +14,7 @@
         <nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <a class="navbar-brand" href="/">
               <img id="navbar_logo" src="./img/navbar_logo.png">
-              <a class="nav-link" href="/">FoodFinderrz<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/">FoodFinderrz</a>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -22,33 +22,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="home.html">Home<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="../home.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/blog">Recipes<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="index.html">Search</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="Accounts/login.html">
-                    <script>if (localStorage.getItem('jwt') != null) {
-                      document.write(localStorage.getItem('name'));
-                    } else {
-                      document.write("Login")
-                    }
-                  </script>
-                  </a>
-                </li>
-                <script>
-                  if (localStorage.getItem('jwt') != null){
-                    document.write(
-                    `<li class="nav-item">
-                      <a class="nav-link" href="Accounts/logout.html">Logout</a>
-                    </li>`
-                    );
-                  }
-                </script>
               </ul>
             </div>
           </nav>
@@ -63,14 +40,16 @@
                   <div className="field">
                     <input id="pass" className="pass" placeholder="Password" type="password" name="pass"/>
                   </div>
-                  <button id="button" onclick="sendLoginInfo()" value="Submit">Submit</button>
+                  <button id="button" onclick="sendLoginInfo()" value="Submit">Login</button>
                   <!-- <input className="button is-primary" onclick="sendCreateInfo()"/> -->
                 </form>
-              </div>
-            </div>
+             
+            
                 <!-- <a href="./login.html">Click here to login</a> -->
                 <h4>Need an Account? Click <a href="./create.html">here</a> to make one!</h4>
               </div>
+              </div>
+            </div>
               <script src="./handleAccounts.js"></script>
               <script src="../node_modules/axios/dist/axios.js"></script>
     </body>

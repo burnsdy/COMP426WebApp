@@ -20,7 +20,7 @@
 			
 			<a class="navbar-brand" href="/">
 				<img id="navbar_logo" src="./img/navbar_logo.png">
-				<a class="nav-link" href="/">Cooking with Class<span class="sr-only">(current)</span></a>
+				<a class="nav-link" href="/">Cooking with Class</a>
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -28,11 +28,17 @@
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active">
-						<a class="nav-link" href="home.html">Home<span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="home.html">Home</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="recipes.html">Recipes<span class="sr-only">(current)</span></a>
-					</li>
+					<script>
+							if (localStorage.getItem('jwt') != null){
+								document.write(
+								`<li class="nav-item">
+									<a class="nav-link" href="recipes.html">Popular</a>
+								</li>`
+								);
+							}
+						</script>
 					<script>
 						if (localStorage.getItem('jwt') != null){
 							document.write(
@@ -43,11 +49,16 @@
 						}
 					</script>
 					<li class="nav-item">
-						<a class="nav-link" href="Accounts/login.html">
-							<script>if (localStorage.getItem('jwt') != null) {
-								document.write(localStorage.getItem('name'));
+						<!-- <a class="nav-link" href="Accounts/login.html"> -->
+							<script>
+							if (localStorage.getItem('jwt') != null) {
+								document.write(`
+								<a href="myrecipes.html">${localStorage.getItem('name')}</a>
+								`);
 							} else {
-								document.write("Login")
+								document.write(`
+								<a href="Accounts/login.html">Login</a>
+								`);
 							}
 						</script>
 						</a>
@@ -65,25 +76,34 @@
 			</div>
 		</nav>
 		<!-- Could add an image background with high transparency to make the background look less bland -->
+		
 		<div class="container-fluid nopadding body_block">
+				
 			<div class="row">
+					
 				<div class="col-12 vh_45">
+						
 				</div>
 			</div>
 			
 			<div class="row">
+			
 				<div id = "search" class="col-12 text_center">
+					<div id = "searchbackground">
 						<form autocomplete="off">
 							<div class="autocomplete" style="width:700px;">
-								<input id="recipeVal" type="text" placeholder="Enter an ingedient or search for a recipe!">
+								<input id="recipeVal" type="text" placeholder="Enter an ingredient or search for a recipe!">
 							</div>
-							<button id="recipeSearch">Submit</button>
+							<button id="searchbutton">Submit</button>
 						</form>
+					</div>
 				</div>
 			</div>
+		</div>
 			<div class="row">
 				<div id="results"></div>
 			</div>
+		
 			<!-- <button id="createAccount" class="float-center">Create Account</button>
 			<script>
 				document.getElementById("createAccount").onclick = function() {
@@ -97,6 +117,7 @@
 			<!-- <p><script>jwt</script></p> -->
 		</div>
 	</div>
+</div>
 
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="node_modules/axios/dist/axios.min.js"></script>
