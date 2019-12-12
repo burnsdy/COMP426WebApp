@@ -276,33 +276,24 @@ div.vh_100 {
 	#clickhere:hover {
 		background: red;
 	}
-<<<<<<< HEAD
+#makerecipebox {
+	background: rgba(0, 0, 0, 0.705);
+	border-radius: 5px;
+	width: 75%;
+	margin-left: 150px;
+	height: 50%;
+	padding: 10px;
 
-
-
-	#name, #ingredients, #instructions {
-		width: 75%;
-		padding: 5px;
-		margin: 15px;
-		font-size: 15px;
-	}
-
-	#ingredients, #instructions {
-		
-		height: 100px;
-	}
-#putacomma {
-	color: white;
 }
 
-	#makerecipebox {
-		background: rgba(0, 0, 0, 0.705);
-		border-radius: 5px;
-		width: 75%;
-		margin-left: 10%;
-		height: 68%;
-		padding: 1%;
-		margin-top: -50px;
-	}
-=======
->>>>>>> ccbe84ddac119f49ce85ce520413e59420e63284
+
+
+#name, #ingredients, #instructions {
+	width: 75%;
+	margin: 10px;
+	font-size: 15px;
+}
+
+#ingredients, #instructions {
+	height: 70px;
+}
