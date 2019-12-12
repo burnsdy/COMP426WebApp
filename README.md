@@ -1,25 +1,14 @@
 # COMP426WebApp
-This application will deliver delicious recipes to hungry college students based solely on the ingredients in their pantry.
+This application will suggest delicious recipes to hungry college students based solely on the ingredients in their pantry.
 
 
 _Dijkstra’s Alcoholism Final Project_
 
-   Our web application will be used to help people come up with meal ideas based on the limited ingredients that they have access to in their dorm, apartment, or home pantry at any given time. They will use the search bar to look up and enter ingredients into their “online pantry.” Once they have finished updating their ingredients, the app will recommend the highest rated meals that can be made using these ingredients.
+   Our web application will be used to help people come up with meal ideas based on the limited ingredients that they have access to in their dorm, apartment, or home pantry at any given time. They will use the search bar to look up ingredients and will be presented with popular recipes using that ingredient. Users can also choose to save a recipe for their personal "cookbook" under their account.
    
-   For the required functionalities, the html input field will autocomplete common ingredient names when the user types them. Once users sign up and create accounts, the app will store their ingredients and can update them as they add or delete items from their online pantry. The backend of the app would be involved with retrieving recipes from a number of web sources, and users would additionally be able to rate and save their favorite recipes, or submit recipes of their own. The app will utilize one of the many public food-related APIs.
+   For the required functionalities, the html input field will autocomplete common ingredient names when the user types them. Once users sign up and create accounts, the app will be allow logged in users to save a recipe to their account for later user. Users will be able to edit and delete their save recipes, but only have the privilidges to view popular recipes from other users. The backend of the app would be used to retrieve recipes from an api and render them on a page. It will also allow users to create their own recipes, stroring them for later use for rendering, edit their own recipes, and delete them if they so choose (demonstrating full CRUD capabilities). The backend will also be employed to allow for proper registration, login and sign out for users.
    
-   The target audience of our web application is other college students, but the app would be useful to anyone who has a tight food budget or limited resources. With the app, users would be able to create delicious meals for themselves and realize their potential as amateur chefs.
-
-
-_List of Tasks:_
-
-Build the user interface for the web application, including the home page, user account page, stored/searched recipes page, and online pantry.
-
-Develop a method for storing the ingredients associated with a user’s online pantry and the user’s frequently-used and highest-rated recipes.
-
-Select and utilize an appropriate food-related API.
-
-Develop the backend of the app for retrieving recipes from various websites based on selected ingredients alone.
+   The target audience of our web application is other college students, but the app would be useful to anyone with an interest in exploring new meal ideas. With the app, users would be able to discover new meals they would be unlikely to encounter otherwise.
 
 
 _Contributors_
