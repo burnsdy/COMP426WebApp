@@ -3,57 +3,55 @@
     <head>
         <title>Create Your Own Recipe!</title>
                   <link rel="stylesheet" type="text/css" href="../Accounts/loginstyle.css">
-                  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
           
                   <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+                  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
               </head>
               <body>
-                  <!-- div to store a recipe in --><div class="container-fluid vh_100">
-                      <nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-                              <a class="navbar-brand" href="./home.html">
-                                <img id="navbar_logo" src="../Img/navbar_logo.png">
-                                <a id="navtitle" class="nav-link" href="./home.html">FoodFinderrz</a>
-                              </a>
-                              <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                              </button> -->
-                              <div class="collapse navbar-collapse" id="navbarNav">
-                                <ul id="setmargintop" class="navbar-nav ml-auto">
-                                  <script>
-                                    if (localStorage.getItem('jwt') != null){
-                                      document.write(
-                                      `<li class="nav-item floatright">
-                                        <a class="nav-link" href="../Accounts/logout.html">Logout</a>
-                                      </li>`
-                                      );
-                                    }
-                                  </script>
-                                  <script>if (localStorage.getItem('jwt') != null) {
-                                      document.write(
-                                      `<li class="nav-item floatright">
-                                          <a class="nav-link" href="myrecipes.html">${localStorage.getItem('name')}</a>
-                                      </li>`
-                                      );
-                                    } else {
-                                      document.write(`
-                                        <li class="nav-item floatright">
-                                          <a class="nav-link" href="../Accounts/login.html">Login</a>
-                                      </li>
-                                      `)
-                                    }
-                                  </script>
-                                  <!-- <li class="nav-item">
-                                    <a class="nav-link" href="../Index.html">Search</a>
-                                  </li> -->
-                                  <li class="nav-item floatright">
-                                      <a class="nav-link" href="recipes.html">Recipes</a>
-                                  </li>
-                                  <li class="nav-item active floatright">
-                                      <a class="nav-link" href="Home.html">Home</a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </nav>
+                  <div class="container-fluid vh_100">
+
+                            <div class="topnav">
+                                <img id="topnav-left" class="topnav-img" src="../img/navbar_logo.png">
+                                <a class="topnav-active" href="./home.html">FoodFinderrz</a>
+                                <div class="topnav-right">
+                                    <a href="./home.html">Home</a>
+                                    <a href="../Index.html">Search</a>
+                                    <script>
+                                        if (localStorage.getItem('jwt') != null){
+                                            document.write(
+                                                `<a href="./recipes.html">Popular</a>`
+                                            );
+                                        }
+                                    </script>
+                                    <script>
+                                        if (localStorage.getItem('jwt') != null){
+                                            document.write(
+                                                `<a href="./makeRecipe.html">Create A Recipe</a>`
+                                            );
+                                        }
+                                    </script>
+                                    <script>
+                                        if (localStorage.getItem('jwt') != null) {
+                                            document.write(`
+                                            <a href="./myrecipes.html">${localStorage.getItem('name')}</a>
+                                            `);
+                                        } else {
+                                            document.write(`
+                                            <a id="topnav-left" href="../Accounts/login.html">Login</a>
+                                            `);
+                                        }
+                                    </script>
+                                    <script>
+                                        if (localStorage.getItem('jwt') != null){
+                                            document.write(
+                                            `<a id="topnav-right" href="../Accounts/logout.html">Logout</a>`
+                                            );
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+
+                            <div class="medium_space"></div>
                             <h1 id = "account_title">Make a Recipe</h1>
                   <div id = "makerecipebox">
                       <form>

@@ -9,45 +9,16 @@
     </head>
     <body>
         <div class="container-fluid vh_100">
-            <nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            
-            <a class="navbar-brand" href="/">
-              <img id="navbar_logo" src="../img/navbar_logo.png">
-              <a id = "navtitle" class="nav-link" href="../views/home.html">FoodFinderrz<span class="sr-only"></span></a>
-            </a>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ml-auto">
-                <!-- <li class="nav-item active">
-                  <a class="nav-link" href="../views/home.html">Home<span class="sr-only"></span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../views/recipes.html">Recipes<span class="sr-only"></span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../Index.html">Search</a>
-                </li> -->
-                <!-- <li class="nav-item">
-                  <a class="nav-link" href="login.html">
-                    <script>if (localStorage.getItem('jwt') != null) {
-                      document.write(localStorage.getItem('name'));
-                    } else {
-                      document.write("Login")
-                    }
-                  </script>
-                  </a>
-                </li>
-                <script>
-                  if (localStorage.getItem('jwt') != null){
-                    document.write(
-                    `<li class="nav-item">
-                      <a class="nav-link" href="Accounts/logout.html">Logout</a>
-                    </li>`
-                    );
-                  }
-                </script> -->
-              </ul>
-            </div>
-          </nav>
+
+          <div class="topnav">
+              <img id="topnav-left" class="topnav-img" src="../img/navbar_logo.png">
+              <a class="topnav-active" href="../views/home.html">FoodFinderrz</a>
+              <div class="topnav-right">
+                  <a href="../views/home.html">Home</a>
+              </div>
+          </div>
+
+          <div class="small_space"></div>
         <h1 id = "account_title">Create an Account</h1>
         <div id = "create_account" className="box has-background-white content">
                 
