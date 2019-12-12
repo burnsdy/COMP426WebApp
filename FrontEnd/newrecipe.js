@@ -16,12 +16,15 @@ async function addRecipePrivate() {
             headers: {Authorization: `Bearer ${tokenStr}`},
             data: {
                 data: {
-                    id: id,
-                    name: name,
-                    ingredients: ingredients,
-                    instructions: instructions,
+                    item: {
+                        id: id,
+                        name: name,
+                        ingredients: ingredients,
+                        instructions: instructions,
+                    }
                 }
-            }
+            },
+            type: "merge",
         })
     } catch (error) {
         alert(error);
