@@ -37,6 +37,15 @@ body {
 	
 	
 }
+#loginheader {
+	float: left;
+	line-height: 30px;
+}
+#loginnav {
+	display: inline-block;
+	float: right;
+	margin-top: 35px;
+}
 #recipebox {
 	border: 1px solid black;
 	margin-left: auto;
