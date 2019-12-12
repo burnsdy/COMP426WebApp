@@ -77,6 +77,7 @@ async function buildHTML(array) {
                     <hr>
                     <p>${ingredients}</p>
                     <p>${instructions}<p>
+                    <button class="save" value="obj">Save to your Recipe Book</button>
                 </div>
             </div>
         `;
