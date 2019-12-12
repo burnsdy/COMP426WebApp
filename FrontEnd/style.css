@@ -293,3 +293,24 @@ div.vh_100 {
 	 padding: 10px;
 
  }
+
+ #searchbutton {
+	 background: black; 
+	 color: white;
+	 height: 46px;
+	 width: 10%;
+	 margin-top: 20px;
+ }
+	 
+ #searchbutton:hover {
+	 background: red;
+ }
+ #searchbackground {
+	 border-radius: 5px;
+	 background: rgba(0, 0, 0, 0.705);
+	 margin-left: 15%;
+	 text-align: center;
+	 padding: 50px;
+	 width: 70%;
+ }
+

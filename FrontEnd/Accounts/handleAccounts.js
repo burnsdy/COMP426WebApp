@@ -84,5 +84,5 @@ function logout() {
 
 function backHome() {
     event.preventDefault();
-    window.location.replace('http://localhost:3001/');
+    window.location.replace('http://localhost:3001/home.html');
 }

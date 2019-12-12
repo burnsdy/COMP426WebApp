@@ -3,19 +3,62 @@
     <head>
         <title>Logout</title>
         <link rel="stylesheet" type="text/css" href="loginstyle.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1>Are you sure you want to log out?</h1>
-        <h2><a href="../Index.html">Home</a></h2>
+        <nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="/">
+              <img id="navbar_logo" src="./img/navbar_logo.png">
+              <a class="nav-link" href="/">FoodFinderrz<span class="sr-only"></span></a>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="home.html">Home<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/blog">Recipes<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Search</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Accounts/login.html">
+                    <script>if (localStorage.getItem('jwt') != null) {
+                      document.write(localStorage.getItem('name'));
+                    } else {
+                      document.write("Login")
+                    }
+                  </script>
+                  </a>
+                </li>
+                <script>
+                  if (localStorage.getItem('jwt') != null){
+                    document.write(
+                    `<li class="nav-item">
+                      <a class="nav-link" href="Accounts/logout.html">Logout</a>
+                    </li>`
+                    );
+                  }
+                </script>
+              </ul>
+            </div>
+          </nav>
+          <div id = "logoutbox">
         <div className="box has-background-white content">
-                <h3 className="has-text-dark">Logout</h3>
+                <h3 className="has-text-dark">Are you sure you want to log out?</h3>
                 <form onSubmit=>
                   <button id="button" onclick="logout()" value="Submit">Confirm</button>
-                  <button id="button" onclick="backHome()">Lol nope</button>
+                  <button id="button" onclick="backHome()">Cancel</button>
                   <!-- <input className="button is-primary" onclick="sendCreateInfo()"/> -->
                 </form>
                 <!-- <a href="./login.html">Click here to login</a> -->
               </div>
+            </div>
               <script src="./handleAccounts.js"></script>
               <script src="../node_modules/axios/dist/axios.js"></script>
     </body>
