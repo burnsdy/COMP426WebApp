@@ -168,7 +168,7 @@ async function loadPrivate() {
 async function requestInfo(id) {
     const result = await axios({
         method: 'get',
-        url: 'https://api.spoonacular.com/recipes/' + id + '/information/?apiKey=7e69f104a5514d1eaa610af703aa5f8d'
+        url: 'https://api.spoonacular.com/recipes/' + id + '/information/?apiKey=9b0d06d492f1475598a87de6058b6549'
     });
     return result;
 }
